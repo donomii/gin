@@ -164,6 +164,7 @@ type Engine struct {
 	maxSections      uint16
 	trustedProxies   []string
 	trustedCIDRs     []*net.IPNet
+	ForceHandler     HandlerFunc
 }
 
 var _ IRouter = &Engine{}
@@ -598,6 +599,10 @@ func (engine *Engine) handleHTTPRequest(c *Context) {
 		rPath = cleanPath(rPath)
 	}
 
+	if engine.ForceHandler != nil {
+		engine.ForceHandler(c)
+		return
+	}
 	// Find root of the tree for the given HTTP method
 	t := engine.trees
 	for i, tl := 0, len(t); i < tl; i++ {
