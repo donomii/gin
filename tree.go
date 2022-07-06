@@ -505,7 +505,7 @@ walk: // Outer loop for walking the tree
 								val = v
 							}
 						}
-						(*value.params)[i] = Param{
+						p := Param{
 							Key:   n.path[1:],
 							Value: val,
 						}
@@ -549,7 +549,7 @@ walk: // Outer loop for walking the tree
 								val = v
 							}
 						}
-						(*value.params)[i] = Param{
+						p := Param{
 							Key:   n.path[2:],
 							Value: val,
 						}
