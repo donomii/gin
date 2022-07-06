@@ -1,16 +1,16 @@
 # Gin Web Framework
 
-<img align="right" width="159px" src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png">
+<img align="right" width="159px" src="https://raw.githubusercontent.com/donomii/logo/master/color.png">
 
-[![Build Status](https://github.com/gin-gonic/gin/workflows/Run%20Tests/badge.svg?branch=master)](https://github.com/gin-gonic/gin/actions?query=branch%3Amaster)
-[![codecov](https://codecov.io/gh/gin-gonic/gin/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-gonic/gin)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gin-gonic/gin)](https://goreportcard.com/report/github.com/gin-gonic/gin)
-[![GoDoc](https://pkg.go.dev/badge/github.com/gin-gonic/gin?status.svg)](https://pkg.go.dev/github.com/gin-gonic/gin?tab=doc)
-[![Join the chat at https://gitter.im/gin-gonic/gin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gin-gonic/gin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Sourcegraph](https://sourcegraph.com/github.com/gin-gonic/gin/-/badge.svg)](https://sourcegraph.com/github.com/gin-gonic/gin?badge)
-[![Open Source Helpers](https://www.codetriage.com/gin-gonic/gin/badges/users.svg)](https://www.codetriage.com/gin-gonic/gin)
-[![Release](https://img.shields.io/github/release/gin-gonic/gin.svg?style=flat-square)](https://github.com/gin-gonic/gin/releases)
-[![TODOs](https://badgen.net/https/api.tickgit.com/badgen/github.com/gin-gonic/gin)](https://www.tickgit.com/browse?repo=github.com/gin-gonic/gin)
+[![Build Status](https://github.com/donomii/gin/workflows/Run%20Tests/badge.svg?branch=master)](https://github.com/donomii/gin/actions?query=branch%3Amaster)
+[![codecov](https://codecov.io/gh/donomii/gin/branch/master/graph/badge.svg)](https://codecov.io/gh/donomii/gin)
+[![Go Report Card](https://goreportcard.com/badge/github.com/donomii/gin)](https://goreportcard.com/report/github.com/donomii/gin)
+[![GoDoc](https://pkg.go.dev/badge/github.com/donomii/gin?status.svg)](https://pkg.go.dev/github.com/donomii/gin?tab=doc)
+[![Join the chat at https://gitter.im/donomii/gin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/donomii/gin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Sourcegraph](https://sourcegraph.com/github.com/donomii/gin/-/badge.svg)](https://sourcegraph.com/github.com/donomii/gin?badge)
+[![Open Source Helpers](https://www.codetriage.com/donomii/gin/badges/users.svg)](https://www.codetriage.com/donomii/gin)
+[![Release](https://img.shields.io/github/release/donomii/gin.svg?style=flat-square)](https://github.com/donomii/gin/releases)
+[![TODOs](https://badgen.net/https/api.tickgit.com/badgen/github.com/donomii/gin)](https://www.tickgit.com/browse?repo=github.com/donomii/gin)
 
 Gin is a web framework written in Go (Golang). It features a martini-like API with performance that is up to 40 times faster thanks to [httprouter](https://github.com/julienschmidt/httprouter). If you need performance and good productivity, you will love Gin.
 
@@ -89,13 +89,13 @@ To install Gin package, you need to install Go and set your Go workspace first.
 1. You first need [Go](https://golang.org/) installed (**version 1.15+ is required**), then you can use the below Go command to install Gin.
 
 ```sh
-$ go get -u github.com/gin-gonic/gin
+$ go get -u github.com/donomii/gin
 ```
 
 2. Import it in your code:
 
 ```go
-import "github.com/gin-gonic/gin"
+import "github.com/donomii/gin"
 ```
 
 3. (Optional) Import `net/http`. This is required for example if using constants such as `http.StatusOK`.
@@ -117,7 +117,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 func main() {
@@ -209,11 +209,11 @@ Gin enables `MsgPack` rendering feature by default. But you can disable this fea
 $ go build -tags=nomsgpack .
 ```
 
-This is useful to reduce the binary size of executable files. See the [detail information](https://github.com/gin-gonic/gin/pull/1852).
+This is useful to reduce the binary size of executable files. See the [detail information](https://github.com/donomii/gin/pull/1852).
 
 ## API Examples
 
-You can find a number of ready-to-run examples at [Gin examples repository](https://github.com/gin-gonic/examples).
+You can find a number of ready-to-run examples at [Gin examples repository](https://github.com/donomii/examples).
 
 ### Using GET, POST, PUT, PATCH, DELETE and OPTIONS
 
@@ -376,9 +376,9 @@ ids: map[b:hello a:1234]; names: map[second:tianou first:thinkerou]
 
 #### Single file
 
-References issue [#774](https://github.com/gin-gonic/gin/issues/774) and detail [example code](https://github.com/gin-gonic/examples/tree/master/upload-file/single).
+References issue [#774](https://github.com/donomii/gin/issues/774) and detail [example code](https://github.com/donomii/examples/tree/master/upload-file/single).
 
-`file.Filename` **SHOULD NOT** be trusted. See [`Content-Disposition` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition#Directives) and [#1693](https://github.com/gin-gonic/gin/issues/1693)
+`file.Filename` **SHOULD NOT** be trusted. See [`Content-Disposition` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition#Directives) and [#1693](https://github.com/donomii/gin/issues/1693)
 
 > The filename is always optional and must not be used blindly by the application: path information should be stripped, and conversion to the server file system rules should be done.
 
@@ -411,7 +411,7 @@ curl -X POST http://localhost:8080/upload \
 
 #### Multiple files
 
-See the detail [example code](https://github.com/gin-gonic/examples/tree/master/upload-file/multiple).
+See the detail [example code](https://github.com/donomii/examples/tree/master/upload-file/multiple).
 
 ```go
 func main() {
@@ -777,7 +777,7 @@ When running the above example using the above the `curl` command, it returns er
 
 ### Custom Validators
 
-It is also possible to register custom validators. See the [example code](https://github.com/gin-gonic/examples/tree/master/custom-validation/server.go).
+It is also possible to register custom validators. See the [example code](https://github.com/donomii/examples/tree/master/custom-validation/server.go).
 
 ```go
 package main
@@ -786,8 +786,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gin-gonic/gin"
-	"github.com/gin-gonic/gin/binding"
+	"github.com/donomii/gin"
+	"github.com/donomii/gin/binding"
 	"github.com/go-playground/validator/v10"
 )
 
@@ -841,11 +841,11 @@ $ curl "localhost:8085/bookable?check_in=2000-03-09&check_out=2000-03-10"
 ```
 
 [Struct level validations](https://github.com/go-playground/validator/releases/tag/v8.7) can also be registered this way.
-See the [struct-lvl-validation example](https://github.com/gin-gonic/examples/tree/master/struct-lvl-validations) to learn more.
+See the [struct-lvl-validation example](https://github.com/donomii/examples/tree/master/struct-lvl-validations) to learn more.
 
 ### Only Bind Query String
 
-`ShouldBindQuery` function only binds the query params and not the post data. See the [detail information](https://github.com/gin-gonic/gin/issues/742#issuecomment-315953017).
+`ShouldBindQuery` function only binds the query params and not the post data. See the [detail information](https://github.com/donomii/gin/issues/742#issuecomment-315953017).
 
 ```go
 package main
@@ -854,7 +854,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 type Person struct {
@@ -882,7 +882,7 @@ func startPage(c *gin.Context) {
 
 ### Bind Query String or Post Data
 
-See the [detail information](https://github.com/gin-gonic/gin/issues/742#issuecomment-264681292).
+See the [detail information](https://github.com/donomii/gin/issues/742#issuecomment-264681292).
 
 ```go
 package main
@@ -892,7 +892,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 type Person struct {
@@ -913,7 +913,7 @@ func startPage(c *gin.Context) {
 	var person Person
 	// If `GET`, only `Form` binding engine (`query`) used.
 	// If `POST`, first checks the `content-type` for `JSON` or `XML`, then uses `Form` (`form-data`).
-	// See more at https://github.com/gin-gonic/gin/blob/master/binding/binding.go#L88
+	// See more at https://github.com/donomii/gin/blob/master/binding/binding.go#L88
         if c.ShouldBind(&person) == nil {
                 log.Println(person.Name)
                 log.Println(person.Address)
@@ -933,7 +933,7 @@ $ curl -X GET "localhost:8085/testing?name=appleboy&address=xyz&birthday=1992-03
 
 ### Bind Uri
 
-See the [detail information](https://github.com/gin-gonic/gin/issues/846).
+See the [detail information](https://github.com/donomii/gin/issues/846).
 
 ```go
 package main
@@ -941,7 +941,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 type Person struct {
@@ -978,7 +978,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 type testHeader struct {
@@ -1010,7 +1010,7 @@ func main() {
 
 ### Bind HTML checkboxes
 
-See the [detail information](https://github.com/gin-gonic/gin/issues/129#issuecomment-124260092)
+See the [detail information](https://github.com/donomii/gin/issues/129#issuecomment-124260092)
 
 main.go
 
@@ -1287,7 +1287,7 @@ func main() {
 func main() {
 	router := gin.Default()
 	router.GET("/someDataFromReader", func(c *gin.Context) {
-		response, err := http.Get("https://raw.githubusercontent.com/gin-gonic/logo/master/color.png")
+		response, err := http.Get("https://raw.githubusercontent.com/donomii/logo/master/color.png")
 		if err != nil || response.StatusCode != http.StatusOK {
 			c.Status(http.StatusServiceUnavailable)
 			return
@@ -1407,7 +1407,7 @@ You may use custom delims
 
 #### Custom Template Funcs
 
-See the detail [example code](https://github.com/gin-gonic/examples/tree/master/template).
+See the detail [example code](https://github.com/donomii/examples/tree/master/template).
 
 main.go
 
@@ -1418,7 +1418,7 @@ import (
     "net/http"
     "time"
 
-    "github.com/gin-gonic/gin"
+    "github.com/donomii/gin"
 )
 
 func formatAsDate(t time.Time) string {
@@ -1470,7 +1470,7 @@ r.GET("/test", func(c *gin.Context) {
 })
 ```
 
-Issuing a HTTP redirect from POST. Refer to issue: [#444](https://github.com/gin-gonic/gin/issues/444)
+Issuing a HTTP redirect from POST. Refer to issue: [#444](https://github.com/donomii/gin/issues/444)
 ```go
 r.POST("/test", func(c *gin.Context) {
 	c.Redirect(http.StatusFound, "/foo")
@@ -1640,8 +1640,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gin-gonic/autotls"
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/autotls"
+	"github.com/donomii/gin"
 )
 
 func main() {
@@ -1665,8 +1665,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gin-gonic/autotls"
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/autotls"
+	"github.com/donomii/gin"
 	"golang.org/x/crypto/acme/autocert"
 )
 
@@ -1690,7 +1690,7 @@ func main() {
 
 ### Run multiple service using Gin
 
-See the [question](https://github.com/gin-gonic/gin/issues/346) and try the following example:
+See the [question](https://github.com/donomii/gin/issues/346) and try the following example:
 
 ```go
 package main
@@ -1700,7 +1700,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -1783,7 +1783,7 @@ There are a few approaches you can use to perform a graceful shutdown or restart
 
 #### Third-party packages
 
-We can use [fvbock/endless](https://github.com/fvbock/endless) to replace the default `ListenAndServe`. Refer to issue [#296](https://github.com/gin-gonic/gin/issues/296) for more details.
+We can use [fvbock/endless](https://github.com/fvbock/endless) to replace the default `ListenAndServe`. Refer to issue [#296](https://github.com/donomii/gin/issues/296) for more details.
 
 ```go
 router := gin.Default()
@@ -1800,7 +1800,7 @@ Alternatives:
 
 #### Manually
 
-In case you are using Go 1.8 or a later version, you may not need to use those libraries. Consider using `http.Server`'s built-in [Shutdown()](https://golang.org/pkg/net/http/#Server.Shutdown) method for graceful shutdowns. The example below describes its usage, and we've got more examples using gin [here](https://github.com/gin-gonic/examples/tree/master/graceful-shutdown).
+In case you are using Go 1.8 or a later version, you may not need to use those libraries. Consider using `http.Server`'s built-in [Shutdown()](https://golang.org/pkg/net/http/#Server.Shutdown) method for graceful shutdowns. The example below describes its usage, and we've got more examples using gin [here](https://github.com/donomii/examples/tree/master/graceful-shutdown).
 
 ```go
 // +build go1.8
@@ -1816,7 +1816,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 func main() {
@@ -1905,7 +1905,7 @@ func loadTemplate() (*template.Template, error) {
 }
 ```
 
-See a complete example in the `https://github.com/gin-gonic/examples/tree/master/assets-in-binary` directory.
+See a complete example in the `https://github.com/donomii/examples/tree/master/assets-in-binary` directory.
 
 ### Bind form-data request with custom struct
 
@@ -2037,7 +2037,7 @@ enough to call binding at once.
 * This feature is only needed for some formats -- `JSON`, `XML`, `MsgPack`,
 `ProtoBuf`. For other formats, `Query`, `Form`, `FormPost`, `FormMultipart`,
 can be called by `c.ShouldBind()` multiple times without any damage to
-performance (See [#1341](https://github.com/gin-gonic/gin/pull/1341)).
+performance (See [#1341](https://github.com/donomii/gin/pull/1341)).
 
 ### Bind form-data request with custom struct and custom tag
 
@@ -2106,7 +2106,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 var html = template.Must(template.New("https").Parse(`
@@ -2159,7 +2159,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 func main() {
@@ -2191,7 +2191,7 @@ func main() {
 import (
     "fmt"
 
-    "github.com/gin-gonic/gin"
+    "github.com/donomii/gin"
 )
 
 func main() {
@@ -2235,7 +2235,7 @@ unnecessary computation.
 import (
 	"fmt"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 func main() {
@@ -2261,7 +2261,7 @@ Look at the example below:
 import (
 	"fmt"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 func main() {
@@ -2292,7 +2292,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/donomii/gin"
 )
 
 func setupRouter() *gin.Engine {
@@ -2336,7 +2336,7 @@ func TestPingRoute(t *testing.T) {
 
 ## Users
 
-Awesome project lists using [Gin](https://github.com/gin-gonic/gin) web framework.
+Awesome project lists using [Gin](https://github.com/donomii/gin) web framework.
 
 * [gorush](https://github.com/appleboy/gorush): A push notification server written in Go.
 * [fnproject](https://github.com/fnproject/fn): The container native, cloud agnostic serverless platform.
